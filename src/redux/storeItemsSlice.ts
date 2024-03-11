@@ -20,9 +20,8 @@ export const storeItemsSlice=createSlice({
     reducers:{
         addToCart(state,action:PayloadAction<CardItem>){
             const existingIndex=state.cartItems.findIndex((item:CardItem)=>{
-                item.storeItem.id===action.payload.storeItem.id
+                return item.storeItem.id===action.payload.storeItem.id
             })
-
             if(existingIndex>=0){
                 state.cartItems[existingIndex].quantity+=action.payload.quantity;
             }

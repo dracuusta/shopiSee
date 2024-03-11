@@ -6,10 +6,7 @@ export interface StoreItem{
     description:string,
     image:string
 }
-interface CardProps{
-    key:number,
-    storeItem:StoreItem
-}
+
 interface CardCartProps{
     key:number,
     storeItem:StoreItem,
