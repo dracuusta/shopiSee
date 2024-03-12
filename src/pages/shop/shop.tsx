@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
 import { Card } from "../../components/card";
+export interface StoreItem {
+    id: number;
+    title: string;
+    price: number;
+    category: string;
+    key:number;
+    description: string;
+    image: string;
+  }
 export const Shop = () => {
     const [storeItems,setStoreItems]=useState<any>([]);
   useEffect(() => {
@@ -10,7 +19,7 @@ export const Shop = () => {
   
   return <div className="shop">
     <div className="shopItems grid grid-cols-4 gap-x-12 ml-2 mr-2">
-    {storeItems&&(storeItems.map((storeItem:any)=>{
+    {storeItems&&(storeItems.map((storeItem:StoreItem)=>{
         return (
             <Card key={storeItem.key} storeItem={storeItem}/>
         )

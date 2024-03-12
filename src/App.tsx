@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Shop/>}/>
           <Route path="/cart" element={<Cart/>}/>
+          <Route path="/product/:name" element={<Product/>}/>
         </Routes>
       </Router>
 
