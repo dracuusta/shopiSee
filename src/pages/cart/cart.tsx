@@ -21,15 +21,18 @@ export const Cart = () => {
     }
     handleCartAmount();
    },[cartAmount,cartItems])
-    return (
-      <div>
-        <h2 className="ml-3 text-3xl">Shopping Cart</h2>
-        <ul className=" grid grid-cols-4 gap-x-12 ml-2 mr-2">
-          {cartItems.length>0?cartItems.map((cartItem)=>{
-            return <CartCard key={cartItem.storeItem.id} storeItem={cartItem.storeItem} quantity={cartItem.quantity} />
-          }):<div className="flex mt-7 ml-2">Nothing to show</div>}
+   return (
+    <div>
+      <h2 className="ml-3 text-3xl">Shopping Cart</h2>
+      {cartItems.length > 0 ? (
+        <ul className="grid grid-cols-4 gap-x-12 ml-2 mr-2">
+          {cartItems.map((cartItem) => {
+            return <CartCard key={cartItem.storeItem.id} storeItem={cartItem.storeItem} quantity={cartItem.quantity} />;
+          })}
         </ul>
-        <div className="totalAmount">Total Amount: {cartAmount}</div>
-      </div>
-    );
-  };
+      ) : (
+        <div className="flex justify-center items-center w-full py-10 text-gray-800 text-xl">Nothing added to the Cart</div>
+      )}
+      <div className="totalAmount flex justify-center items-center w-full py-10 text-gray-800 text-xl">Total Amount: {cartAmount}</div>
+    </div>
+  );}

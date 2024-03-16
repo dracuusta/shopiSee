@@ -27,7 +27,7 @@ export const Card = (props: CardProps) => {
   
     <div className="Card mt-2 hover:bg-gray-100 hover:border-gray-300 hover:shadow-lg transition duration-150 ease-in-out">
       <div className="item-image m-1 self-center">
-      <Link to={`/product/${props.storeItem.id}`} >
+      <Link to={`/product/${props.storeItem.id}`}  >
         <div className="border-solid border-2 flex justify-center">
           <img className="w-56 h-80 p-8" src={props.storeItem.image} />
         </div>
@@ -39,7 +39,7 @@ export const Card = (props: CardProps) => {
           </button>
         </div>
         <div className="secondRow flex justify-between">
-          <div className="price ">{props.storeItem.price}</div>
+          <div className="price ">`$ {props.storeItem.price}`</div>
           <div className="quantity flex justify-end">
             <div>Quantity :</div>
             <input

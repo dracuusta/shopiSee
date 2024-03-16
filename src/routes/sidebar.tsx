@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import { StoreItem } from "../components/card"
 
-export const Sidebar=()=>{
+export const Sidebar:FC=()=>{
     const [mappedSet,setMappedSet]=useState<Set<String>>(new Set());
     useEffect(()=>{
           fetch("https://fakestoreapi.com/products?limit=25")
