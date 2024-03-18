@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { SignInGoogle } from "./signInGoogleButton";
 import { singInAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
-import { Password } from "phosphor-react";
+import { UserContext} from "../../components/context/user.context";
 
 interface FormFields {
   email: string;
@@ -15,12 +15,12 @@ const defaultFormFields: FormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
+    const {setCurrentUser}:any=useContext(UserContext);
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     try{
-        const response=await singInAuthUserWithEmailAndPassword(email,password);
-        console.log(response);
+        const response:any=await singInAuthUserWithEmailAndPassword(email,password);
+        setCurrentUser(response.user);
         resetFormFields();
     }catch(error:any){
         switch (error.code){

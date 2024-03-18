@@ -1,10 +1,13 @@
+import { useContext } from "react";
 import { createUserDocumentFromAuth, signInWithGooglePopup } from "../../utils/firebase/firebase.utils";
+import { UserContext } from "../../components/context/user.context";
 
 export const SignInGoogle = () => {
-
+  const {setCurrentUser}:any=useContext(UserContext);
   const logGoogleUser = async () => {
-    const response = await signInWithGooglePopup();
-    const userDocRef = createUserDocumentFromAuth(response);
+    const response:any = await signInWithGooglePopup();
+    setCurrentUser(response.user);
+    await createUserDocumentFromAuth(response);
   };
 
   return (

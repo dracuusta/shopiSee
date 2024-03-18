@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Card } from '../../components/card';
-import { StoreItem } from '../shop/shop';
 import { ProductTile } from '../../components/productTile';
 import { Loader } from '../../components/loader';
 interface ProductItme{
