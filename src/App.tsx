@@ -5,6 +5,7 @@ import { Shop } from './pages/shop/shop'
 import Product from './pages/product/product'
 import { Cart } from './pages/cart/cart'
 import { Authentication } from './routes/authentication/authentication'
+import { Banner } from './components/banner'
 function App() {
 
   return (
@@ -12,6 +13,7 @@ function App() {
     <div className='App'>
       <Router>
           <Navbar/>
+          <Banner/>
         <Routes>
           <Route path="/" element={<Shop/>}/>
           <Route path="/cart" element={<Cart/>}/>
