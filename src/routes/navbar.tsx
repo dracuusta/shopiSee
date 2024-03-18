@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom'
 import {ShoppingCart} from 'phosphor-react'
 import './navbar.css'
+import { Authentication } from './authentication/authentication'
 import { FC } from 'react'
 export const Navbar:FC=()=>{
     return (
@@ -10,7 +11,7 @@ export const Navbar:FC=()=>{
                 <Link to="/cart">
                     <ShoppingCart size={32}/>
                 </Link>
-                <Link to="/SignIn">Sign In</Link>
+                <Link to="/Authentication">Sign In</Link>
             </div>
        </div>
     )
