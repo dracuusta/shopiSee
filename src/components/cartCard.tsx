@@ -30,7 +30,7 @@ export const CartCard=(props:CardCartProps)=>{
                 <div className="border-solid border-2 flex justify-center">
                 <img className="w-56 h-80 hover:scale-110 duration-700 p-8" src={props.storeItem.image}/></div>
                 <div className="firstRow flex justify-between mt-1">
-                <div className="title truncate max-w-80">{props.storeItem.title}</div>
+                <div className="title text-xs truncate max-w-80">{props.storeItem.title}</div>
                 </div>
                 <div className="secondRow flex justify-between">
                 <div className="price ">{props.storeItem.price}</div>

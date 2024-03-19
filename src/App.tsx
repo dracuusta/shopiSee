@@ -6,6 +6,7 @@ import Product from './pages/product/product'
 import { Cart } from './pages/cart/cart'
 import { Authentication } from './routes/authentication/authentication'
 import { Banner } from './components/banner'
+import Welcome from './pages/welcome/welcome'
 function App() {
 
   return (
@@ -15,7 +16,8 @@ function App() {
           <Navbar/>
           <Banner/>
         <Routes>
-          <Route path="/" element={<Shop/>}/>
+          <Route path="/" element ={<Welcome/>}/>
+          <Route path="/shop" element={<Shop/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/Authentication" element={<Authentication/>}/>
           <Route path="/product/:product" element={<Product/>}/>
