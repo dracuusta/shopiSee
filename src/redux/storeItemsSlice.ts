@@ -19,6 +19,9 @@ export const storeItemsSlice=createSlice({
     initialState:initialState,
     reducers:{
         addToCart(state,action:PayloadAction<CardItem>){
+            if(action.payload.quantity===0){
+                return ;
+            }
             const existingIndex=state.cartItems.findIndex((item:CardItem)=>{
                 return item.storeItem.id===action.payload.storeItem.id
             })

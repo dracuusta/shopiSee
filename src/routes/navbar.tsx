@@ -27,15 +27,17 @@ export const Navbar:FC=()=>{
     },[cartItems])
     
     return (
-       <div className='navbar'>
-            <div className='links flex z-50 fixed w-screen flex-row justify-end gap-0  p-4 border-solid text-white bg-neutral-800'>
-                <Link className='w-12' to="/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></Link>
-                <Link className='w-16' to="/shop">Shop</Link>
+       <div className='navbar flex p-4 justify-between  text-black border-b-2'>
+        <div className='banner text-2xl'>
+           <Link to="/">SHOPiSEE</Link>
+        </div>
+            <div className='links flex flex-row'>
+                <Link className='w-16 flex justify-center items-center' to="/shop">Shop</Link>
                 <Link className='w-16' to="/cart">
-                   <div className='flex'> <ShoppingCart size={32}/><div>{totalQuantity}</div></div>
+                   <div className='flex'> <ShoppingCart size={32}/><div className='flex justify-center pl-1 items-center'>{totalQuantity}</div></div>
                 </Link>
-                {currentUser?(<button className='w-26' onClick={signOutHandler}>Sign Out</button>):
-                (<button className='w-16'><Link to="/Authentication">Sign In</Link></button>)}
+                {currentUser?(<button className='w-26 font-sans' onClick={signOutHandler}>Sign Out</button>):
+                (<button className='w-16 bg-neutral-800 text-white hover:border-solid hover:bg-white hover:text-black rounded-lg'><Link className='font-sans' to="/Authentication">Login</Link></button>)}
             </div>
        </div>
     )

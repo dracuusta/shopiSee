@@ -35,12 +35,12 @@ export const ProductTile = (props: CardProps) => {
         </div>
         <div>{props.storeItem.description}</div>
         <div className="secondRow flex justify-between">
-          <div className="price ">{props.storeItem.price}</div>
+          <div className="price font-bold pt-4">$ {props.storeItem.price}</div>
           <div className="quantity flex justify-end">
-            <div>Quantity :</div>
+            <div className="font-bold pt-4">Quantity :</div>
             <input
               value={input}
-              className="w-8"
+              className="w-8 pt-4 font-bold"
               onChange={(e) => setInput(parseInt(e.target.value))}
               type="number"
               placeholder="quantity"

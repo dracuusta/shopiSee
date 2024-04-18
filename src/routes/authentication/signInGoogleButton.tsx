@@ -15,7 +15,7 @@ export const SignInGoogle = () => {
       <div className="w-48 max-w-xs">
         <button 
           onClick={logGoogleUser}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transform transition duration-150 ease-in-out w-full"
+          className="bg-blue-500 h-12 font-sans hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transform transition duration-150 ease-in-out w-full"
         >
           Sign-in With Google
         </button>

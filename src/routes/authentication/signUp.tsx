@@ -56,7 +56,7 @@ const SignUpForm = () => {
 
   return (
     <div className="text-center h-full p-10 mt-5">
-      <h1 className="mb-8 text-3xl text-center">Sign up with your email and password</h1>
+      <h1 className="mb-8 text-3xl font-sans text-center">Sign up with your email and password</h1>
       <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
         <div className="flex flex-col space-y-4">
           <div className="flex flex-col">
@@ -65,6 +65,7 @@ const SignUpForm = () => {
                 className="block border border-grey-light w-full p-3 rounded mb-4"
                 type="text"
                 required
+                autoComplete="off"
                 placeholder="Display Name"
                 onChange={handleChange}
                 name="displayName"
@@ -78,6 +79,7 @@ const SignUpForm = () => {
                 required
                 onChange={handleChange}
                 name="email"
+                autoComplete="off"
                 placeholder="Email"
                 value={email}
               />
@@ -89,6 +91,7 @@ const SignUpForm = () => {
                 required
                 onChange={handleChange}
                 name="password"
+                autoComplete="off"
                 placeholder="Password"
                 value={password}
               />
@@ -100,13 +103,14 @@ const SignUpForm = () => {
                 required
                 onChange={handleChange}
                 name="confirmPassword"
+                autoComplete="off"
                 placeholder="Confirm Password"
                 value={confirmPassword}
               />
             </div>
           </div>
           <button
-            className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline self-center"
+            className="mt-4 font-sans bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline self-center"
             type="submit"
           >
             Submit

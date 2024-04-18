@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const WelcomePage: React.FC = () => {
     return (
         <div className="welcome-container">
-            <h1 className='text-6xl p-4 text-slate-600'>Welcome to ShopiSee!</h1>
+            <h1 className='text-6xl p-10 text-slate-600'>Welcome to SHOPiSEE!</h1>
             <p>Your one-stop shop for everything you love.</p>
             <p>Browse our wide range of products, find your favorites, and discover new ones!</p>
             <div className='flex'>

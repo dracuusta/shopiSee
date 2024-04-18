@@ -13,7 +13,6 @@ function App() {
       <div className="App">
         <Router>
           <Navbar />
-          <Banner />
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/shop" element={<Shop />} />

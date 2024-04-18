@@ -51,7 +51,7 @@ const SignInForm = () => {
 
   return (
     <div className="text-center p-10 mt-5">
-      <h1 className="mb-8 text-3xl text-center">
+      <h1 className="mb-8 font-sans text-3xl text-center">
         Sign In with your email and password
       </h1>
       <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
@@ -81,7 +81,7 @@ const SignInForm = () => {
             </div>
           </div>
           <button
-            className="mt-4 w-48 text-xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline self-center"
+            className="mt-4 font-sans w-48 text-xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline self-center"
             type="submit"
           >
             Submit

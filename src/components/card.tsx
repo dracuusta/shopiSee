@@ -30,14 +30,14 @@ export const Card = (props: CardProps) => {
     <div className="Card mt-4 transition duration-150 ease-in-out">
       <div className="item-image m-1 self-center">
       <Link to={`/product/${props.storeItem.id}`}  >
-        <div className="border-solid border-black border-2 flex justify-center">
+        <div className="border-solid border-2 flex justify-center">
           <img className="w-56 h-80  hover:scale-110 duration-700 p-8" src={props.storeItem.image} />
         </div>
         </Link>
         <div className="firstRow flex justify-between mt-1">
-          <div className="title mt-4 text-xs font-bold truncate max-w-80">{props.storeItem.title}</div>
-          <button onClick={handleAddToCart}>
-            <ShoppingBag size={24} />
+          <div className="title mt-4 text-xl font-bold truncate max-w-80">{props.storeItem.title}</div>
+          <button className="flex items-end" onClick={handleAddToCart}>
+            <ShoppingBag className="stroke-4" size={24} />
           </button>
         </div>
         <div className="secondRow flex justify-between">
