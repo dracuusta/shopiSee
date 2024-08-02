@@ -12,11 +12,19 @@ export interface StoreItem {
     image: string;
   }
 export const Shop = () => {
-    const [storeItems,setStoreItems]=useState<any>([]);
+    const [storeItems,setStoreItems]=useState<StoreItem[]>([{
+      id:0,
+      title:'',
+      price:0,
+      category:'',
+      key:0,
+      description:'',
+      image:''
+    }]);
   useEffect(() => {
     fetch("https://fakestoreapi.com/products?limit=25")
       .then((res) => res.json())
-      .then((json) => setStoreItems([...json]));
+      .then((json:StoreItem[]) => setStoreItems([...json]));
   }, []);
   
   return <>

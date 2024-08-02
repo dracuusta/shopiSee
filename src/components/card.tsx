@@ -17,7 +17,6 @@ interface CardProps {
   key: number;
   storeItem: StoreItem;
 }
-
 export const Card = (props: CardProps) => {
   const [input, setInput] = useState(1);
   const dispatch = useDispatch();

@@ -1,6 +1,5 @@
 import { FC, useEffect, useState } from "react"
-import { StoreItem } from "../components/card"
-
+import { StoreItem } from "./components/card";
 export const Sidebar:FC=()=>{
     const [mappedSet,setMappedSet]=useState<Set<String>>(new Set());
     useEffect(()=>{

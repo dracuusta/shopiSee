@@ -5,7 +5,6 @@ import { Shop } from "./pages/shop/shop";
 import Product from "./pages/product/product";
 import { Cart } from "./pages/cart/cart";
 import { Authentication } from "./routes/authentication/authentication";
-import { Banner } from "./components/banner";
 import Welcome from "./pages/welcome/welcome";
 function App() {
   return (

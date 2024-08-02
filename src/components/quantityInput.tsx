@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
-
-export function QuantityInput({setInput}:any) {
-    const [input, setInputState]:any = useState(0);
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+interface QuantityInputProps{
+setInput:Dispatch<SetStateAction<number>>
+}
+export const QuantityInput:React.FC<QuantityInputProps>=({setInput}) =>{
+    const [input, setInputState] = useState<number>(0);
     useEffect(()=>{
       setInput(input);
     },[input])
     const handleDecrement = () => {
-      setInputState((prev:any) => (prev > 0 ? prev - 1 : 0)); 
+      setInputState((prev:number) => (prev > 0 ? prev - 1 : 0)); 
     };
   
     const handleIncrement = () => {
-      setInputState((prev:any) => prev + 1);
+      setInputState((prev:number) => prev + 1);
     };
   
     return (
