@@ -19,6 +19,9 @@ export const storeItemsSlice=createSlice({
     initialState:initialState,
     reducers:{
         addToCart(state,action:PayloadAction<CardItem>){
+            if(action.payload.quantity===0){
+                return ;
+            }
             const existingIndex=state.cartItems.findIndex((item:CardItem)=>{
                 return item.storeItem.id===action.payload.storeItem.id
             })
@@ -28,9 +31,12 @@ export const storeItemsSlice=createSlice({
             else{
                 state.cartItems.push({quantity:action.payload.quantity,storeItem:action.payload.storeItem})
             }
+        },
+        removeFromCart(state, action:PayloadAction<CardItem>){
+            state.cartItems=state.cartItems.filter((item:CardItem)=>item.storeItem.id!=action.payload.storeItem.id)
         }
     }
 })
 
-export const {addToCart}=storeItemsSlice.actions;
+export const {addToCart,removeFromCart}=storeItemsSlice.actions;
 export default storeItemsSlice.reducer;
